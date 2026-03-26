@@ -3,107 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Executive Invitation | Kitty Party 2026</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Tiro+Devanagari+Hindi&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <title>Professional Invitation | Kitty 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Tiro+Devanagari+Hindi&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #B76E79; /* Rose Gold */
-            --secondary: #2C3E50; /* Slate */
-            --bg: #FDF2F2; /* Champagne */
-            --glass: rgba(255, 255, 255, 0.6);
+            --rose-gold: #B76E79;
+            --slate: #2C3E50;
+            --cream: #FFF9F9;
+            --glass: rgba(255, 255, 255, 0.75);
         }
 
-        body, html {
+        * { box-sizing: border-box; }
+
+        body {
             margin: 0;
             padding: 0;
-            height: 100%;
-            background: var(--bg);
+            background: var(--cream);
             font-family: 'Montserrat', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
             overflow: hidden;
         }
 
-        /* Ambient Background Animation */
-        .ambient-bg {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 20% 30%, #fad4df 0%, transparent 40%),
-                        radial-gradient(circle at 80% 70%, #e0c3fc 0%, transparent 40%);
-            filter: blur(80px);
+        /* Ambient Background Logic */
+        .bg-glow {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 10% 10%, #FAD4DF 0%, transparent 30%),
+                        radial-gradient(circle at 90% 90%, #E0C3FC 0%, transparent 30%);
+            filter: blur(60px);
             z-index: -1;
-            animation: pulse 10s infinite alternate;
         }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.1); }
-        }
-
-        /* The Oval Canvas Box */
-        .oval-container {
+        /* The Refined Oval Canvas */
+        .oval-canvas {
             width: 90%;
-            max-width: 450px;
-            aspect-ratio: 1 / 1.5;
+            max-width: 400px;
+            padding: 60px 30px;
             background: var(--glass);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-radius: 250px 250px 100px 100px; /* Modern Architectural Oval */
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 40px;
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            /* Engineering a perfect vertical oval */
+            border-radius: 200px 200px 180px 180px;
+            border: 1.5px solid rgba(183, 110, 121, 0.3);
             text-align: center;
-            box-shadow: 0 40px 100px rgba(0,0,0,0.05);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+            animation: fadeInScale 1.4s cubic-bezier(0.16, 1, 0.3, 1);
             position: relative;
-            animation: slideUp 1.2s cubic-bezier(0.23, 1, 0.32, 1);
         }
 
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(50px); }
-            to { opacity: 1; transform: translateY(0); }
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.9) translateY(30px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
         }
 
         .eyebrow {
             text-transform: uppercase;
-            letter-spacing: 5px;
-            font-size: 10px;
-            color: var(--secondary);
-            margin-bottom: 20px;
-            font-weight: 600;
+            letter-spacing: 6px;
+            font-size: 11px;
+            color: var(--slate);
+            margin-bottom: 25px;
+            opacity: 0.8;
         }
 
-        .hindi-body {
+        .hindi-content {
             font-family: 'Tiro Devanagari Hindi', serif;
-            font-size: 20px;
-            color: var(--secondary);
-            line-height: 1.8;
+            font-size: 21px;
+            color: var(--slate);
+            line-height: 1.7;
             margin: 20px 0;
-            padding: 0 10px;
+            font-weight: 500;
         }
 
         .divider {
-            width: 40px;
+            width: 50px;
             height: 1px;
-            background: var(--primary);
-            margin: 20px 0;
+            background: var(--rose-gold);
+            margin: 30px auto;
         }
 
-        /* Professional Logistics Panel */
+        /* Structured Logistics Panel */
         .logistics {
-            margin: 25px 0;
+            margin: 30px 0;
             width: 100%;
+            max-width: 250px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .log-item {
+        .row {
             display: flex;
             justify-content: space-between;
-            border-bottom: 1px solid rgba(183, 110, 121, 0.2);
             padding: 12px 0;
+            border-bottom: 0.5px solid rgba(44, 62, 80, 0.1);
+            font-size: 14px;
+        }
+
+        .label { font-weight: 600; color: var(--rose-gold); text-transform: uppercase; letter-spacing: 1px; }
+        .val { color: var(--slate); font-weight: 300; }
+
+        .venue {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            color: var(--rose-gold);
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        .cta {
+            margin-top: 40px;
+            background: var(--slate);
+            color: white;
+            padding: 16px 45px;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 3px;
+            font-weight: 600;
+            transition: 0.4s;
+            border-radius: 4px;
+        }
+
+        .cta:hover {
+            background: var(--rose-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(183, 110, 121, 0.3);
+        }
+
+        .floating-accent {
+            position: absolute;
+            font-size: 24px;
+            opacity: 0.4;
+            animation: bounce 4s infinite ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <div class="floating-accent" style="top: 5%; right: 15%;">✨</div>
+    <div class="floating-accent" style="bottom: 10%; left: 10%; animation-delay: 1s;">🌸</div>
+
+    <div class="oval-canvas">
+        <div class="eyebrow">The Official Invitation</div>
+        
+        <div class="hindi-content">
+            होली के रंगों और नवरात्रि की भक्ति के सुंदर दिनों के बाद, अब समय है अपनी सहेलियों के साथ थोड़ा मुस्कुराने और खिलखिलाने का!
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="logistics">
+            <div class="row">
+                <span class="label">Date</span>
+                <span class="val">28 March, 2026</span>
+            </div>
+            <div class="row">
+                <span class="label">Time</span>
+                <span class="val">03:45 PM</span>
+            </div>
+        </div>
+
+        <div class="venue">At Our Home</div>
+
+        <a href="https://wa.me/?text=I%20am%20coming!" class="cta">CONFIRM PRESENCE</a>
+
+        <p style="font-size: 10px; color: #999; margin-top: 40px; letter-spacing: 1px; font-weight: 600;">
+            आपकी उपस्थिति का इंतज़ार रहेगा!
+        </p>
+    </div>
+
+</body>
+</html>            padding: 12px 0;
             font-size: 14px;
             color: var(--secondary);
         }
