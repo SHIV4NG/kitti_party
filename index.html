@@ -4,108 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kitty Party Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --pink-bg: #FAD4DF;
+            --text-red: #D25C68;
+            --accent-blue: #007A99;
+        }
         body {
             margin: 0;
             padding: 0;
+            background-color: var(--pink-bg);
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: #fdf2f2; /* Soft festive background */
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Playfair Display', serif;
         }
         .card {
-            width: 90%;
-            max-width: 400px;
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            border: 8px solid #fff;
-            position: relative;
-        }
-        .header-bg {
-            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            width: 100%;
+            max-width: 450px;
+            background: #FAD4DF; /* Matching the image background */
             padding: 40px 20px;
             text-align: center;
-            color: #d84315;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            position: relative;
+            border: 2px solid rgba(255,255,255,0.5);
         }
-        .header-bg h1 {
-            margin: 0;
-            font-size: 28px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 900;
-        }
-        .content {
-            padding: 30px 25px;
-            text-align: center;
-        }
-        .hindi-text {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #444;
-            margin-bottom: 25px;
-        }
-        .details-box {
-            background: #fff8f0;
-            border: 1px dashed #e67e22;
-            border-radius: 12px;
-            padding: 20px;
-            text-align: left;
-        }
-        .detail-row {
-            margin: 10px 0;
-            font-size: 16px;
-            color: #2c3e50;
-            display: flex;
-            justify-content: space-between;
-        }
-        .label { font-weight: bold; color: #e67e22; }
-        .footer {
-            margin-top: 25px;
-            font-style: italic;
-            color: #e91e63;
+        /* Top Hindi Paragraph */
+        .hindi-content {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 22px;
+            color: var(--text-red);
+            line-height: 1.4;
+            margin-bottom: 30px;
             font-weight: bold;
         }
-        .decor {
-            position: absolute;
-            font-size: 40px;
-            opacity: 0.2;
+        /* English Details Grid (Engineer-Style Layout) */
+        .details-grid {
+            border-top: 1px dotted var(--text-red);
+            border-bottom: 1px dotted var(--text-red);
+            padding: 15px 0;
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: var(--text-red);
         }
+        .day-box { font-size: 14px; text-transform: uppercase; border-bottom: 1px solid var(--text-red); }
+        .date-box { font-size: 32px; font-weight: bold; }
+        .time-box { font-size: 16px; border-bottom: 1px solid var(--text-red); }
+
+        .location {
+            color: var(--accent-blue);
+            font-style: italic;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+        .tagline {
+            color: var(--accent-blue);
+            font-size: 14px;
+            margin-top: 40px;
+            line-height: 1.5;
+            padding: 0 20px;
+        }
+        /* Interactive Button for guests */
+        .btn {
+            margin-top: 30px;
+            background: var(--text-red);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn:hover { transform: scale(1.05); background: #b04652; }
     </style>
 </head>
 <body>
 
 <div class="card">
-    <div class="header-bg">
-        <h1>Kitty Party Invitation</h1>
+    <div class="hindi-content">
+        रंगों के त्योहार के बाद,<br>
+        माता रानी की जय जयकार के बाद,<br>
+        पति-बच्चों को थोड़ी देर करो साइड,<br>
+        किटी पार्टी में आओ — <span style="font-family: 'Playfair Display';">fun, food aur full vibe!</span>
     </div>
 
-    <div class="content">
-        <p class="hindi-text">
-            नमस्ते सखियों! होली के चटकीले रंगों और नवरात्रि की भक्ति के सुंदर दिनों के बाद, अब समय है अपनी सहेलियों के साथ थोड़ा मुस्कुराने, खिलखिलाने और गपशप करने का!
-        </p>
-
-        <div class="details-box">
-            <div class="detail-row">
-                <span class="label">DATE:</span>
-                <span>28 March, 2026</span>
-            </div>
-            <div class="detail-row">
-                <span class="label">TIME:</span>
-                <span>3:45 PM</span>
-            </div>
-            <div class="detail-row">
-                <span class="label">VENUE:</span>
-                <span>Our Home</span>
-            </div>
-        </div>
-
-        <p class="footer">आपकी उपस्थिति का इंतज़ार रहेगा!</p>
-        <p style="font-size: 14px; color: #7f8c8d;">- आपकी माताजी का नाम</p>
+    <div class="details-grid">
+        <div class="day-box">SATURDAY</div>
+        <div class="date-box">MARCH 28<br><span style="font-size: 18px;">2026</span></div>
+        <div class="time-box">3:45 PM</div>
     </div>
+
+    <div class="location">At HOME</div>
+
+    <div class="tagline">
+        Get ready for a fabulous day of fun,<br>laughter, and friendship!
+    </div>
+
+    <a href="https://wa.me/?text=I%20am%20coming%20to%20the%20Kitty%20Party!" class="btn">Confirm Your Spot</a>
 </div>
 
 </body>
